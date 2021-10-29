@@ -4,11 +4,12 @@ import AppContext from '../context/AppContext';
 import '../styles/components/Checkout.css'
 
 const Checkouts = () => {
-        const {state, removeFromCart} = useContext(AppContext);
-        const cart = state.products;
+        const {state: {cart}, removeFromCart} = useContext(AppContext);
+       
 
-        const handleRemove = product => {
+        const handleRemove = (product) => () => {
                 removeFromCart(product)
+                console.log('se borro')
         }
       
         const handleSumTotal = () => {
@@ -16,42 +17,27 @@ const Checkouts = () => {
                 const sum = cart.reduce(reducer, 0);
                 return sum;
         }
-          console.log(state)
-          console.log(cart.length)
+          console.log(cart)
         return (
                 <div className="Checkout">
-                        <div className="Checkout-content">
-                                {cart.length > 0 ? <h3>Lista de Pedidos:</h3> : <h3>Sin Pedidos...</h3>}
-                                {/* {cart.map((item)=>(
-                                          <div className="Checkout-item">
-                                                <div className="Checkout-element">
-                                                        <h4>{item.title}</h4> 
-                                                        <span>{state.products.title}</span>
-                                                </div>
-                                                <button
-                                                type="button" 
-                                                className="btn btn-delete"
-                                                onClick={handleRemove}
-                                                >
-                                                        <i className="fas fa-trash-alt" title='Eliminar'></i>
-                                                </button>
-                                          </div>
-                                   ))}  */}
-                                {cart.length > 0 ? (
-                                  <div className="Checkout-item">
-                                        <div className="Checkout-element">
-                                                <h4>{cart.product}</h4> 
-                                                <span>{cart.products.title}</span>
-                                        </div>
-                                        <button
-                                                type="button" 
-                                                className="btn btn-delete"
-                                                onClick={handleRemove}
-                                        >
-                                                <i className="fas fa-trash-alt" title='Eliminar'></i>
-                                        </button>
-                                  </div> 
-                                ): <h2>Gracais</h2> }
+                    <div className="Checkout-content">
+                        {cart.length > 0 ? <h3>Lista de Pedidos:</h3> : <h3>Sin Pedidos...</h3>}
+
+                        {cart.map((item)=>(
+                            <div  key={item.cartId} className="Checkout-item" >
+                                 <div className="Checkout-element">
+                                     <h4>{item.title}</h4> 
+                                     <span>{item.price}</span>
+                                 </div>
+                                <button
+                                     type="button" 
+                                     className="btn btn-delete"
+                                     onClick={handleRemove(item.cartId)} >
+                                         <i className="fas fa-trash-alt" title='Eliminar'></i>
+                                 </button>
+                            </div>
+                                   ))} 
+                              
                              
                         </div>
                         {cart.length > 0 && (

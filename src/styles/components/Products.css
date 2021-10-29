@@ -12,7 +12,7 @@
   margin: 0 0 20px 0;
   position: relative;
 
-  background: rgba( 246, 233, 233, 0.3 );
+  background: rgba(255, 255, 255, 0.904);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.07 );
 backdrop-filter: blur( 2px );
 -webkit-backdrop-filter: blur( 2px );
@@ -21,7 +21,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 }
 .Products-item-info {
-  padding: 10px;
+  margin: 10px;
 }
 .Products-item-info h2 {
   font-size: 18px;
@@ -42,8 +42,10 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   border-radius: 5px 5px 0 0;
   object-fit: contain;
 }
-.Products-item button {
+.btn-button {
   background: linear-gradient(to bottom, #dcdcdc 5%, #abb0b5 100%);
+  /* background-color: black;
+  color: white; */
   width: 100%;
   padding: 10px;
   border-radius: 0px 0px 5px 5px;
@@ -53,6 +55,6 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   font-size: 14px;
   font-weight: 300;
 }
-.Products-item button:hover {
-  background-color: rgba(39,44,49,0.06);
+.btn-button:hover {
+  background-color: rgb(202, 193, 193);
 }

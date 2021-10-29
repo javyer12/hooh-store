@@ -7,8 +7,11 @@ const Products = () => {
         const { state: { products }, addToCart }= useContext( AppContext );
         
 
-        const handleAddToCart = product  => {
-                addToCart(product)
+        const handleAddToCart = product => () => {
+                const random = Math.floor(Math.random() * 1000);
+                const newProduct = {...product, cartId : `${product.id}-${random}`}
+                console.log(newProduct);
+                addToCart(newProduct)
         }
         return (
                <div className="Products">

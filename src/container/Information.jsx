@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../styles/components/Information.css';
 
-const Information = () => {
+const Information = ({cart}) => {
         return (
                <div className="Information">
                        <div className="Information-content">
@@ -35,8 +35,8 @@ const Information = () => {
                                <h3>Pedido: </h3>
                                <div className="information-item">
                                        <div className="Information-element">
-                                                <h4>Item name</h4>
-                                                <span> $45</span>
+                                                <h4>title</h4>
+                                                <span> price</span>
                                        </div>
                                </div>
                        </div>
