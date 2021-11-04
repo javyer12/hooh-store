@@ -7,7 +7,7 @@ import '../styles/components/Payment.css'
 
 const Payments = ({history}) => {
         const {state: {cart, buyer}, addNewOrder} = useContext(AppContext);
-
+        console.log(buyer)
         const paypalOptions = {
                 clientId:'AeWbnz9EKwXXow8HKzwMBk18dHnVAGo8JPYMZ-_vSNLzCe0_rl1Y1aEnc5upMkcKxOQIDfX7kPoNC8rY',
                 intent: 'capture',

@@ -1,13 +1,13 @@
 import React from 'react'
 import { GoogleMap, LoadScript, Marker} from '@react-google-maps/api'
-const Map = () => {
+const Map = ({data}) => {
   const mapStyle = {
     height: '60vh',
     width: '100%'
   }
   const defaultCenter = {
-    lat: 15.385,
-    lng: -87.815
+    lat: data.lat,
+    lng: data.lng
   }
   return (
    <LoadScript googleMapsApiKey = 'AIzaSyCewf_3smDheiK1bAsIyNKmIfxnWzeYo7w '>
