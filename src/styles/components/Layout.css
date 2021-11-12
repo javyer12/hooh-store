@@ -11,7 +11,7 @@ body {
   padding: 10px;
   /* grid-template-columns: minmax(auto, 768px); */
   display: grid;
-  margin: 10px;
+  margin: 8px;
   justify-content: center;
   
 }
