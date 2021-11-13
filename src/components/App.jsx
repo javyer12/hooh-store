@@ -4,9 +4,7 @@ import Home from '../container/Home';
 import '../styles/components/app.css';
 
 const App = () => {
-
     <Home/>
-
 }
 
 
