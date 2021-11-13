@@ -1,14 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
+import Home from '../container/Home';
 import '../styles/components/app.css';
 
 const App = () => {
 
-    <h1>hola mundo</h1>;
-    <Link to="/">Home</Link>
+    <Home/>
 
 }
 
 
 export default App;
+
+
+// import React from 'react';
+// import initialState from '../../initialState';
+// import Products from '../components/Products'
+// const Home = () => {
+//         return (
+//                <Products  products={initialState.products} />
+//         )
+// }
+
+// export default Home;
