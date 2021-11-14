@@ -1,10 +1,15 @@
 .Checkout {
-  grid-template-columns: 3fr 1fr;
-  grid-gap: 2rem;
-  grid-row-gap: 1.5em;
+  grid-template-columns: 2.5fr 1fr;
+  grid-gap: 1.5rem;
+  grid-row-gap: 1em;
   display: grid;
   padding: 0 0 4em 0;
+  margin: 2em  4em 0 4em;
+
 }
+/* .Checkout-content {
+  margin: 10px;
+} */
 .Checkout-item {
   display: flex;
   justify-content: space-between;

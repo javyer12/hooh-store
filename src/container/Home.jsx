@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 import initialState from '../../initialState';
 import Products from '../components/Products';
 
+//npx create-strapi-app my-graft --quickstart
+
 const Home = () => {
   return (
     <>
